@@ -1,8 +1,9 @@
 import { useState } from 'react'
 import { CHANGE_SCREEN, HOME_SCREEN } from '../../constants'
 import { useFanzoneContext } from '../../context/FanzoneContextProvider'
+import Button from '../Button/Button'
 
-import { LoginScreenStyled, InputStyled } from './style'
+import { LoginScreenStyled, InputStyled, ButtonWrapper } from './style'
 
 const LoginScreen = () => {
     //to-do: controlled inputs, merge handlelogin and verifyemail, dispatch on verification
@@ -42,7 +43,9 @@ const LoginScreen = () => {
                 <input type="text" className="inputText" required onBlur={verifyEmail} />
                 <span className="floating-label">Email</span>
             </InputStyled>
-            <button onClick={() => handleLogin()}>Login</button>
+            <ButtonWrapper>
+                <Button onClick={() => handleLogin()} text="Login" />
+            </ButtonWrapper>
             {emailValidity && <p>{emailValidity}</p>}
         </LoginScreenStyled>
     )

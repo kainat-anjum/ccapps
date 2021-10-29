@@ -5,6 +5,7 @@ export const LoginScreenStyled = styled.section`
     grid-template-rows: repeat(2, 1fr);
     grid-gap: 10px;
     margin: 20px;
+    margin-top: 65px;
 `
 
 export const InputStyled = styled.article`
@@ -29,7 +30,7 @@ export const InputStyled = styled.article`
     .inputText {
         font-size: 18px;
         width: 96%;
-        height: 71px;
+        height: 50px;
         border-radius: 6px;
         border: solid 1px #002e62;
     }
@@ -38,8 +39,12 @@ export const InputStyled = styled.article`
         position: absolute;
         pointer-events: none;
         transition: 0.2s ease all;
-        transform: translate(10px, 25px);
+        transform: translate(10px, 19px);
         left: 0;
         top: 0;
     }
+`
+
+export const ButtonWrapper = styled.div`
+    text-align: left;
 `
