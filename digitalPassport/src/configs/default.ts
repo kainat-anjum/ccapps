@@ -25,8 +25,7 @@ const defaultConfig = {
         qrCodeCard: { display: true },
         emailCard: { display: false },
         photoBoothCard: { display: false },
-        rewardsCard: { display: false },
-      
+        rewardsCard: { display: true }
     }
 }
 

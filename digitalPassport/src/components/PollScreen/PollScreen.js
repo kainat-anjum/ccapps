@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import WidgetHeader from '../WidgetHeader'
 
 export const PollScreen = () => {
     const userConfig = {
@@ -36,5 +37,12 @@ export const PollScreen = () => {
         console.log(document.getElementById('pollId'))
     })
 
-    return loaded && <div id="poll" className="wrapper"></div>
+    return (
+        loaded && (
+            <React.Fragment>
+                <WidgetHeader title="Poll" />
+                <div id="poll" className="wrapper"></div>
+            </React.Fragment>
+        )
+    )
 }

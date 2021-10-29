@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import WidgetHeader from '../WidgetHeader'
 
 export const TriviaScreen = () => {
     const userConfig = {
@@ -35,5 +36,12 @@ export const TriviaScreen = () => {
         })
     })
 
-    return loaded && <div id="trivia" className="wrapper"></div>
+    return (
+        loaded && (
+            <React.Fragment>
+                <WidgetHeader title="trivia" />
+                <div id="trivia" className="wrapper"></div>
+            </React.Fragment>
+        )
+    )
 }

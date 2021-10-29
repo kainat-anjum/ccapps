@@ -7,7 +7,8 @@ import {
     TRIVIA_SCREEN,
     POLL_SCREEN,
     QNA_SCREEN,
-    TESTIMONIAL_SCREEN
+    TESTIMONIAL_SCREEN,
+    REWARDS_SCREEN
 } from '../../constants'
 import { useFanzoneContext } from '../../context/FanzoneContextProvider'
 import { QRScanner } from '../QRScanner/QRScanner'
@@ -15,6 +16,7 @@ import { TriviaScreen } from '../TriviaScreen/TriviaScreen'
 import { PollScreen } from '../PollScreen/PollScreen'
 import { QnaScreen } from '../QnaScreen/QnaScreen'
 import { TestimonialScreen } from '../TestimonialScreen/TestimonialScreen'
+import { RewardsScreen } from '../RewardsScreen/RewardsScreen'
 
 const Screens = () => {
     const {
@@ -41,6 +43,8 @@ const Screens = () => {
                 return <QnaScreen />
             case TESTIMONIAL_SCREEN:
                 return <TestimonialScreen />
+            case REWARDS_SCREEN:
+                return <RewardsScreen />
             default:
                 return <HomeScreen />
         }

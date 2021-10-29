@@ -1,4 +1,12 @@
-import { CHANGE_SCREEN, QR_SCAN_SCREEN, TRIVIA_SCREEN, POLL_SCREEN, QNA_SCREEN, TESTIMONIAL_SCREEN } from '../../constants'
+import {
+    CHANGE_SCREEN,
+    QR_SCAN_SCREEN,
+    TRIVIA_SCREEN,
+    POLL_SCREEN,
+    QNA_SCREEN,
+    TESTIMONIAL_SCREEN,
+    REWARDS_SCREEN
+} from '../../constants'
 import { useFanzoneContext } from '../../context/FanzoneContextProvider'
 import { HomeScreenStyled, CardStyled, CardsWrapperStyled, TagStyled, HeadingStyled } from './style'
 import themeConfigs from './../../configs'
@@ -41,14 +49,20 @@ const Card = (props: CardProps) => {
                 })
                 break
 
-                case 'Testimonial':
-                    dispatch({
-                        type: CHANGE_SCREEN,
-                        payload: TESTIMONIAL_SCREEN
-                    })
-                    break
+            case 'Testimonial':
+                dispatch({
+                    type: CHANGE_SCREEN,
+                    payload: TESTIMONIAL_SCREEN
+                })
+                break
 
-                    
+            case 'Rewards':
+                dispatch({
+                    type: CHANGE_SCREEN,
+                    payload: REWARDS_SCREEN
+                })
+                break
+
             default:
                 break
         }
@@ -72,9 +86,7 @@ const HomeScreen = () => {
             qrCodeCard: { display: qrCodeCardDisplay },
             emailCard: { display: emailCardDisplay },
             photoBoothCard: { display: photoBoothCardDisplay },
-            rewardsCard: { display: rewardCardDisplay },
-          
-
+            rewardsCard: { display: rewardCardDisplay }
         }
     } = themeConfigs
 
