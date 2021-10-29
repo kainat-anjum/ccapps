@@ -1,0 +1,4 @@
+#trivia #fk-trivia-wrapper-layout {
+    overflow-y: scroll;
+    height: calc(100vh - 225px);
+}
