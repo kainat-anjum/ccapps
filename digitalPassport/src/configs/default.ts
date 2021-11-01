@@ -20,9 +20,9 @@ const defaultConfig = {
     homeScreen: {
         triviaCard: { display: true },
         pollCard: { display: true },
-        qnaCard: { display: true },
-        testimonialCard: { display: true },
-        qrCodeCard: { display: true },
+        qnaCard: { display: false },
+        testimonialCard: { display: false },
+        qrCodeCard: { display: false },
         emailCard: { display: false },
         photoBoothCard: { display: false },
         rewardsCard: { display: true },
