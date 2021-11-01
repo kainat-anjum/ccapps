@@ -1,5 +1,6 @@
 import { SplashScreenImage, SplashScreenStyled } from './style'
 import themeConfigs from '../../configs'
+import Loader from '../Loader'
 
 const SplashScreen = () => {
     const src = themeConfigs.splashScreen.src
@@ -7,6 +8,7 @@ const SplashScreen = () => {
     return (
         <SplashScreenStyled>
             <SplashScreenImage src={src} />
+            <Loader />
         </SplashScreenStyled>
     )
 }
