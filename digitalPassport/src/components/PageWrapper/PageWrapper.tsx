@@ -6,7 +6,7 @@ import { styles } from '../../styles'
 import Footer from '../Footer/Footer'
 import Header from '../Header/Header'
 
-import { PageWrapperStyled } from './style'
+import { PageWrapperStyled, ScrollableContentWrapper } from './style'
 
 type PageWrapperProps = {
     children: ReactNode
@@ -32,13 +32,16 @@ const PageWrapper = (props: PageWrapperProps) => {
 
     const StylesWrapper = styles.custom
     const { id } = themeConfigs
+    const isSplashScreen = screen === SPLASH_SCREEN
 
     return (
         <StylesWrapper id={id}>
-            <PageWrapperStyled>
-                {!(screen === SPLASH_SCREEN) && <Header />}
-                {children}
-                {!(screen === SPLASH_SCREEN) && <Footer />}
+            <PageWrapperStyled isSplashScreen={isSplashScreen}>
+                <ScrollableContentWrapper isSplashScreen={isSplashScreen}>
+                    {!isSplashScreen && <Header />}
+                    {children}
+                </ScrollableContentWrapper>
+                {!isSplashScreen && <Footer />}
             </PageWrapperStyled>
         </StylesWrapper>
     )

@@ -2,10 +2,11 @@ import styled from 'styled-components'
 
 export const FooterStyled = styled.section`
     display: flex;
-    margin: 20px;
-    position: absolute;
-    bottom: 0;
-    right: 0;
+    justify-content: center;
+    align-items: center;
+    background: #fdbb2f;
+    padding: 20px;
+    height: 50px;
 
     img {
         height: 25px;
