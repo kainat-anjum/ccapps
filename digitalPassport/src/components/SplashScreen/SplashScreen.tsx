@@ -1,12 +1,12 @@
-import { SplashScreenStyled } from './style'
+import { SplashScreenImage, SplashScreenStyled } from './style'
 import themeConfigs from '../../configs'
 
 const SplashScreen = () => {
-    const src=themeConfigs.splashScreen.src;
+    const src = themeConfigs.splashScreen.src
 
     return (
         <SplashScreenStyled>
-            <img src={src} />
+            <SplashScreenImage src={src} />
         </SplashScreenStyled>
     )
 }
