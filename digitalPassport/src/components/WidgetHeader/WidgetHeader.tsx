@@ -1,10 +1,22 @@
 import React from 'react'
-import { WidgetHeaderWrapper } from './style'
+import { BackButtonWrapper, WidgetHeaderWrapper, WidgetTitle } from './style'
+import { BackIcon } from '../../assets'
 
 type WidgetHeaderProps = {
     title: string
+    handleBackClick?: React.MouseEventHandler
 }
 
-export const WidgetHeader = ({ title }: WidgetHeaderProps) => {
-    return <WidgetHeaderWrapper>{title}</WidgetHeaderWrapper>
+export const WidgetHeader = (props: WidgetHeaderProps) => {
+    const { title, handleBackClick } = props
+
+    return (
+        <WidgetHeaderWrapper>
+            <BackButtonWrapper onClick={handleBackClick}>
+                <BackIcon />
+            </BackButtonWrapper>
+
+            <WidgetTitle>{title}</WidgetTitle>
+        </WidgetHeaderWrapper>
+    )
 }

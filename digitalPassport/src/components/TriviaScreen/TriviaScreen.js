@@ -1,4 +1,6 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useCallback } from 'react'
+import { CHANGE_SCREEN, HOME_SCREEN } from '../../constants'
+import { useFanzoneContext } from '../../context/FanzoneContextProvider'
 import WidgetHeader from '../WidgetHeader'
 
 export const TriviaScreen = () => {
@@ -36,10 +38,15 @@ export const TriviaScreen = () => {
         })
     })
 
+    const { dispatch } = useFanzoneContext()
+    const goBack = useCallback(() => {
+        dispatch({ type: CHANGE_SCREEN, payload: HOME_SCREEN })
+    }, [dispatch])
+
     return (
         loaded && (
             <React.Fragment>
-                <WidgetHeader title="trivia" />
+                <WidgetHeader title="trivia" handleBackClick={goBack} />
                 <div id="trivia" className="wrapper"></div>
             </React.Fragment>
         )
