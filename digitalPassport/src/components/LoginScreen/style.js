@@ -31,7 +31,13 @@ export const InputStyled = styled.article`
         width: 96%;
         height: 50px;
         border-radius: 6px;
-        border: solid 1px #002e62;
+        border: 1px solid #33a2fd;
+        outline: none;
+    }
+
+    .inputText:focus {
+        box-shadow: 0 0 0 2px #33a2fd;
+        border: 1px solid #33a2fd;
     }
 
     .floating-label {
@@ -42,10 +48,6 @@ export const InputStyled = styled.article`
         left: 0;
         top: 0;
         color: rgba(0, 46, 98, 0.56);
-    }
-
-    &:focus {
-        border: 3px solid #002e62;
     }
 `
 

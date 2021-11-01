@@ -7,4 +7,12 @@ export const StyledButton = styled.button`
     border: none;
     border-radius: 3px;
     font-size: 16px;
+    outline: none;
+
+    &:focus {
+        box-shadow: none;
+    }
+    &:hover {
+        cursor: pointer;
+    }
 `
