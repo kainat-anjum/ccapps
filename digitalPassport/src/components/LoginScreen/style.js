@@ -42,6 +42,7 @@ export const InputStyled = styled.article`
         transform: translate(10px, 19px);
         left: 0;
         top: 0;
+        color: rgba(0, 46, 98, 0.56);
     }
 `
 
