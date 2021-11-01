@@ -7,6 +7,7 @@ export const FooterStyled = styled.section`
     background: #fdbb2f;
     padding: 20px;
     height: 50px;
+    border-radius: 0px 0px 5px 5px;
 
     img {
         height: 25px;
