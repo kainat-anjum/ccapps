@@ -5,7 +5,6 @@ export const LoginScreenStyled = styled.section`
     grid-template-rows: repeat(2, 1fr);
     grid-gap: 10px;
     margin: 20px;
-    margin-top: 65px;
 `
 
 export const InputStyled = styled.article`
@@ -43,6 +42,10 @@ export const InputStyled = styled.article`
         left: 0;
         top: 0;
         color: rgba(0, 46, 98, 0.56);
+    }
+
+    &:focus {
+        border: 3px solid #002e62;
     }
 `
 
