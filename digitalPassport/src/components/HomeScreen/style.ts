@@ -12,9 +12,8 @@ export const CardStyled = styled.section`
     background-color: #fff;
     border: 1px solid #ccc;
 
-    p{
+    p {
         margin: 0 0 10px 0;
-
     }
 `
 
@@ -41,5 +40,12 @@ export const TagStyled = styled.span`
 export const HeadingStyled = styled.h2`
     color: #fff;
     font-size: 22px;
-    margin-top: 65px;
+    margin: 25px 0px 42px;
+    text-transform: uppercase;
+    letter-spacing: 11.44px;
+    font-weight: normal;
+`
+
+export const Image = styled.img`
+    width: 100%;
 `

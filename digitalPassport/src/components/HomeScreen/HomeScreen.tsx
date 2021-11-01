@@ -8,7 +8,7 @@ import {
     REWARDS_SCREEN
 } from '../../constants'
 import { useFanzoneContext } from '../../context/FanzoneContextProvider'
-import { HomeScreenStyled, CardStyled, CardsWrapperStyled, TagStyled, HeadingStyled } from './style'
+import { HomeScreenStyled, CardStyled, CardsWrapperStyled, TagStyled, HeadingStyled, Image } from './style'
 import themeConfigs from './../../configs'
 
 type CardProps = {
@@ -86,12 +86,15 @@ const HomeScreen = () => {
             qrCodeCard: { display: qrCodeCardDisplay },
             emailCard: { display: emailCardDisplay },
             photoBoothCard: { display: photoBoothCardDisplay },
-            rewardsCard: { display: rewardCardDisplay }
+            rewardsCard: { display: rewardCardDisplay },
+            imageSrc
         }
     } = themeConfigs
 
     return (
         <HomeScreenStyled>
+            <Image src={imageSrc} />
+
             <HeadingStyled>Participate</HeadingStyled>
             <CardsWrapperStyled>
                 {qrCodeCardDisplay && <Card text="QR code" />}

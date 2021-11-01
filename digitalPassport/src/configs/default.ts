@@ -25,7 +25,8 @@ const defaultConfig = {
         qrCodeCard: { display: true },
         emailCard: { display: false },
         photoBoothCard: { display: false },
-        rewardsCard: { display: true }
+        rewardsCard: { display: true },
+        imageSrc: '/default/home-screen.png'
     }
 }
 
