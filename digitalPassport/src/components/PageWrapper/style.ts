@@ -21,5 +21,6 @@ export const PageWrapperStyled = styled.section<CommonProps>`
 export const ScrollableContentWrapper = styled.section<CommonProps>`
     height: calc(100vh - 102px ${(props) => !props.isSplashScreen && '- 90px'});
     overflow-y: auto;
+    overflow-x: hidden;
     padding-bottom: 10px;
 `
