@@ -1,15 +1,15 @@
 const defaultConfig = {
     id: 'fk-default-layout',
     splashScreen: {
-        src: '/default/bevi-gif.gif'
+        src: '/default/nrf.svg'
         // display: true
     },
     header: {
-        logo: '/default/fankave.png'
+        logo: '/default/nrf.svg'
     },
 
     footer: {
-        logo: '/default/fankave.png'
+        logo: '/default/nrf.svg'
     },
 
     loginScreen: {
