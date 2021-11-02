@@ -9,7 +9,8 @@ const defaultConfig = {
     },
 
     footer: {
-        logo: '/default/nrf.svg'
+        logo: `/default/nrf.svg`,
+        display: false
     },
 
     loginScreen: {

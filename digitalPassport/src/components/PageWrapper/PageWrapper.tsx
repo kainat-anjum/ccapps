@@ -33,11 +33,12 @@ const PageWrapper = (props: PageWrapperProps) => {
     const StylesWrapper = styles.custom
     const { id } = themeConfigs
     const isSplashScreen = screen === SPLASH_SCREEN
+    const footer = themeConfigs.footer.display
 
     return (
         <StylesWrapper id={id}>
-            <PageWrapperStyled isSplashScreen={isSplashScreen}>
-                <ScrollableContentWrapper isSplashScreen={isSplashScreen}>
+            <PageWrapperStyled isSplashScreen={isSplashScreen} hasFooter={footer}>
+                <ScrollableContentWrapper isSplashScreen={isSplashScreen} hasFooter={footer}>
                     {!isSplashScreen && <Header />}
                     {children}
                 </ScrollableContentWrapper>

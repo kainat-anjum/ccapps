@@ -3,12 +3,14 @@ import { FooterStyled } from './style'
 import themeConfigs from '../../configs'
 
 const Footer = () => {
-    const logo = themeConfigs.header.logo
+    const logo = themeConfigs.footer.logo
+    const display = themeConfigs.footer.display
     return (
-        <FooterStyled>
-            <img src={logo} />
-        </FooterStyled>
+        display && (
+            <FooterStyled>
+                <img src={logo} />
+            </FooterStyled>
+        )
     )
 }
-
 export default Footer

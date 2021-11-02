@@ -12,4 +12,8 @@ export const FooterStyled = styled.section`
     img {
         height: 25px;
     }
+
+    @media (max-width: 430px) {
+        border-radius: 0;
+    }
 `

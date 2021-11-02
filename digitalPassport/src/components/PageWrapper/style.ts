@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components'
 
-type CommonProps = { isSplashScreen: boolean }
+type CommonProps = { isSplashScreen: boolean; hasFooter: boolean }
 
 const SlimScrollStyle = css`
     &::-webkit-scrollbar {
@@ -37,13 +37,26 @@ export const PageWrapperStyled = styled.section<CommonProps>`
         display: grid;
         grid-template-rows: auto 90px;
     `}
+
+    @media (max-width: 430px) {
+        max-width: 100vw;
+        height: 100vh;
+        margin: 0px;
+        border: none;
+        border-radius: 0;
+    }
 `
 
 export const ScrollableContentWrapper = styled.section<CommonProps>`
-    height: calc(100vh - 102px ${(props) => !props.isSplashScreen && '- 100px'});
+    height: calc(100vh - 102px ${(props) => !props.isSplashScreen && props.hasFooter && '- 90px'});
     overflow-y: auto;
     overflow-x: hidden;
-    padding-bottom: 10px;
+    ${(props) => props.hasFooter && 'padding-bottom: 10px;'}
 
     ${SlimScrollStyle}
+
+    @media (max-width: 430px) {
+        height: calc(100vh ${(props) => (props.hasFooter ? (!props.isSplashScreen ? '- 100px' : '- 20px') : '')});
+        ${(props) => props.hasFooter && 'padding-bottom: 20px;'}
+    }
 `
